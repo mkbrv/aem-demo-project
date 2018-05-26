@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/demo-project"/>
+    <filter root="/content/demo-project"/>
+    <filter root="/content/dam/demo-project"/>
+</workspaceFilter>
