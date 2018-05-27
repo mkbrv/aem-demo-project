@@ -1,3 +1,6 @@
 <div data-sly-test="${wcmmode.edit}">[ Edit ${component.title} Component ]</div>
 
 <p data-sly-test="${properties.text}">Text property: ${properties.text}</p>
+
+<div data-sly-use.script="script.js @ text=properties.text">${script.hi}</div>
+

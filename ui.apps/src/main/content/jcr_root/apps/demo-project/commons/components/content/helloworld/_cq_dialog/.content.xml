@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    jcr:title="Properties"
-    sling:resourceType="cq/gui/components/authoring/dialog">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" jcr:primaryType="nt:unstructured"
+          jcr:title="Properties"
+          sling:resourceType="cq/gui/components/authoring/dialog">
     <content
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
@@ -11,11 +12,59 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
+                    <heading
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="heading"
+                        name="./heading"/>
                     <text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Text"
                         name="./text"/>
+                    <decorativeBar
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        name="./decorativeBar"
+                        text="Decorative Bar"
+                        fieldDescription="Adds a decorative bar to the heading"
+                        granite:class="cq-dialog-showhide"
+                        value="true">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-data-attribute="some-attribute"/>
+                    </decorativeBar>
+                    <decorativeBarColor
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Decorative Bar Color"
+                        name="./decorativeBarColor">
+                        <items jcr:primaryType="nt:unstructured">
+
+                            <black
+                                jcr:primaryType="nt:unstructured"
+                                text="Black"
+                                value="dark"/>
+                            <grey
+                                jcr:primaryType="nt:unstructured"
+                                text="Grey"
+                                value="secondary"/>
+                            <primary
+                                jcr:primaryType="nt:unstructured"
+                                selected="{Boolean}true"
+                                text="Amadeus blue"
+                                value="primary"/>
+                            <info
+                                jcr:primaryType="nt:unstructured"
+                                text="Light blue"
+                                value="info"/>
+                            <white
+                                jcr:primaryType="nt:unstructured"
+                                text="White"
+                                value="white"/>
+
+                        </items>
+                    </decorativeBarColor>
                 </items>
             </column>
         </items>
