@@ -1,0 +1,50 @@
+{
+  "name": "demo-project",
+  "version": "1.0.0",
+  "description": "This a content package project generated using the AEM Multimodule Lazybones template.",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "npm install rimraf -g",
+    "build": "gulp build",
+    "clean": "del /F /Q node_modules"
+  },
+  "eslintConfig": {
+    "rules": {
+      "linebreak-style": [
+        "error",
+        "windows"
+      ]
+    },
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "env": {}
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "eslint": "^4.7.2",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.4.0",
+    "gulp-debug": "^3.1.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-filelog": "^0.4.1",
+    "gulp-if": "^2.0.2",
+    "gulp-options": "^1.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-print": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-slang": "^1.0.1",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "jquery": "^3.2.1"
+  }
+}

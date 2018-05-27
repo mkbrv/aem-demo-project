@@ -12,7 +12,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="demo-project Default"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[group:demo-project,/apps/demo-project/components/form/container]"
+                        components="[group:demo-project,/apps/demo-project/commons/components/form/container]"
                         policyResourceType="wcm/foundation/components/responsivegrid">
                         <cq:authoring jcr:primaryType="nt:unstructured">
                             <assetToComponentMapping jcr:primaryType="nt:unstructured">
@@ -21,7 +21,7 @@
                                     assetGroup="media"
                                     assetMimetype="image/*"
                                     droptarget="image"
-                                    resourceType="demo-project/components/content/image"
+                                    resourceType="demo-project/commons/components/content/image"
                                     type="Images"/>
                             </assetToComponentMapping>
                         </cq:authoring>
@@ -41,7 +41,7 @@
                         jcr:primaryType="nt:unstructured"
                         jcr:title="demo-project Form"
                         sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/apps/demo-project/components/form/button,/apps/demo-project/components/form/hidden,/apps/demo-project/components/form/options,/apps/demo-project/components/form/text]">
+                        components="[/apps/demo-project/commons/components/form/button,/apps/demo-project/commons/components/form/hidden,/apps/demo-project/commons/components/form/options,/apps/demo-project/commons/components/form/text]">
                         <jcr:content jcr:primaryType="nt:unstructured"/>
                     </form-container>
                 </container>

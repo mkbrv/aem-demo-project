@@ -34,9 +34,6 @@ ui.content/src/main/content/jcr_root/META-INF/MANIFEST.MF
 /yarn.lock
 /node
 ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/commons/site/css/
-ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/commercial/site/css/
-ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/corporate/site/css/
-ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/careers/site/css/
 
 cq5dam.*
 generated

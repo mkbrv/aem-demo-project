@@ -16,7 +16,7 @@
                     <components jcr:primaryType="nt:unstructured">
                         <form jcr:primaryType="nt:unstructured">
                             <container
-                                cq:policy="demo-project/components/form/container/form-container"
+                                cq:policy="demo-project/commons/components/form/container/form-container"
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="wcm/core/components/policies/mapping"/>
                         </form>

@@ -1,0 +1,7 @@
+#base=js
+external/jquery.min.js
+external/handlebars-v4.0.10.js
+external/js.cookie.js
+external/popper-utils.js
+external/popper.js
+external/bootstrap.min.js
