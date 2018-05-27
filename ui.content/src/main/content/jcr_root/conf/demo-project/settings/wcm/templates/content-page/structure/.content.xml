@@ -7,6 +7,7 @@
         cq:template="/conf/demo-project/settings/wcm/templates/content-page"
         jcr:primaryType="cq:PageContent"
         sling:resourceType="demo-project/commons/components/structure/base-page">
+
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="wcm/foundation/components/responsivegrid">
@@ -17,6 +18,7 @@
                 <cq:responsive jcr:primaryType="nt:unstructured"/>
             </responsivegrid>
         </root>
+
         <cq:responsive jcr:primaryType="nt:unstructured">
             <breakpoints jcr:primaryType="nt:unstructured">
                 <phone
