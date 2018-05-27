@@ -1,76 +1,42 @@
-# Created by https://www.gitignore.io/api/eclipse,java,maven
-
-### Eclipse ###
-*.pydevproject
-.metadata
-.gradle
-bin/
-tmp/
-*.tmp
-*.bak
-*.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-
-# Eclipse Core
-.project
-
-# External tool builders
-.externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# CDT-specific
-.cproject
-
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
-
-# Java annotation processor (APT)
-.factorypath
-
-# PDT-specific
-.buildpath
-
-# sbteclipse plugin
-.target
-
-# TeXlipse plugin
-.texlipse
-
-
-### Java ###
-*.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
-
-### Maven ###
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-
-### Vault ###
-.vlt
-
-### IntelliJ ###
-.idea/
 *.iml
+*.idea
+*.jar
+*.lst
+*.class
+.sync
+.brackets.json
+*.7z
+*.zip
+/.settings/
+/.pmd
+/.project
+/jshintreport.xml
+/.bash_profile
+/src/
+phantomjsdriver.log
+.checkstyle
+.pmdruleset.xml
+.settings
+**/reports/*
+.sonarlint/*
+ui.apps/src/main/content/jcr_root/META-INF/MANIFEST.MF
+ui.apps/src/main/content/jcr_root/WEB-INF/web.xml
+ui.content/src/main/content/jcr_root/META-INF/MANIFEST.MF
+.DS_Store
+**/target/*
+**/.classpath
+**/.project
+/node_modules
+/lib
+/bin
+/etc
+*-lock.json
+/yarn.lock
+/node
+ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/commons/site/css/
+ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/commercial/site/css/
+ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/corporate/site/css/
+ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/careers/site/css/
+
+cq5dam.*
+generated
