@@ -5,5 +5,3 @@ use(function script() {
         hi: 'Hi ' + text
     };
 });
-
-
