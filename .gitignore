@@ -33,6 +33,7 @@ ui.content/src/main/content/jcr_root/META-INF/MANIFEST.MF
 *-lock.json
 /yarn.lock
 /node
+node_modules
 ui.apps/src/main/content/jcr_root/etc/clientlibs/demo-project/commons/site/css/
 
 cq5dam.*
