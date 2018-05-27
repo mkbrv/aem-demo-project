@@ -3,21 +3,21 @@ var namespace = 'demo-project';
 var folders = ['commons'];
 
 /* Requires */
-var gulp        = require('gulp'),
-    watch       = require('gulp-watch'),
+var gulp = require('gulp'),
+    watch = require('gulp-watch'),
     // Utilities
-    gutil       = require('gulp-util'),
-    plumber     = require('gulp-plumber'),
-    slang       = require('gulp-slang'),
-    debug       = require('gulp-debug'),
-    options     = require('gulp-options'),
-    gulpif      = require('gulp-if'),
+    gutil = require('gulp-util'),
+    plumber = require('gulp-plumber'),
+    slang = require('gulp-slang'),
+    debug = require('gulp-debug'),
+    options = require('gulp-options'),
+    gulpif = require('gulp-if'),
 
 // Styles
-    sass        = require('gulp-sass'),
-    sourcemaps  = require('gulp-sourcemaps'),
+    sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     // Scripts
-    eslint      = require('gulp-eslint');
+    eslint = require('gulp-eslint');
 
 /**
  * Helper: eachFolder
@@ -27,7 +27,7 @@ var gulp        = require('gulp'),
  * @param {String} prefixPath - prefixPath to be added into each folder array.
  * @return {Array} newFolders - Return new array with new folders paths.
  */
-function eachFolder(prefixPath, path){
+function eachFolder(prefixPath, path) {
     var newFolders = folders.map(function (val, index) {
         return prefixPath + val + '/' + path
     })
@@ -41,9 +41,9 @@ function eachFolder(prefixPath, path){
 
 function Options() {
     var opts = {
-        prod:false,
-        debug:false,
-        env:'local'
+        prod: false,
+        debug: false,
+        env: 'local'
     }
     if (options.has('env')) {
         opts.env = options.get('env');
@@ -61,26 +61,26 @@ function Options() {
 }
 
 /* Paths */
-var root        = 'ui.apps/src/main/content/jcr_root/',
-    components  = eachFolder(root + 'apps/' + namespace + '/' , 'components/'),
-    designs     = root + 'etc/designs/' + namespace + '/',
-    clientlibs  = root + 'etc/clientlibs/' + namespace + '/';
+var root = 'ui.apps/src/main/content/jcr_root/',
+    components = eachFolder(root + 'apps/' + namespace + '/', 'components/'),
+    designs = root + 'etc/designs/' + namespace + '/',
+    clientlibs = root + 'etc/clientlibs/' + namespace + '/';
 
 // Styles
 
-var cssPath     = eachFolder(clientlibs,'site/css/'),
-    sassPath    = eachFolder(clientlibs,'site/scss/'),
-    sassVendorPath = eachFolder(clientlibs,'site/scss/vendors'),
-    mainCss     = eachFolder(clientlibs,'site/styles/main.scss'),
-    cssBuild    = eachFolder(clientlibs,'site/css/main.css'),
-    cssSrcMaps  = eachFolder(clientlibs,'site/css/main.css.map');
+var cssPath = eachFolder(clientlibs, 'site/css/'),
+    sassPath = eachFolder(clientlibs, 'site/scss/'),
+    sassVendorPath = eachFolder(clientlibs, 'site/scss/vendors'),
+    mainCss = eachFolder(clientlibs, 'site/styles/main.scss'),
+    cssBuild = eachFolder(clientlibs, 'site/css/main.css'),
+    cssSrcMaps = eachFolder(clientlibs, 'site/css/main.css.map');
 
 // Scripts
-var jsPath      = eachFolder(clientlibs,'site/js/internal/'),
-    vendorPath  = eachFolder(clientlibs,'site/js/external/'),
+var jsPath = eachFolder(clientlibs, 'site/js/internal/'),
+    vendorPath = eachFolder(clientlibs, 'site/js/external/'),
 
     // Images
-    imgPath     = designs + 'images/';
+    imgPath = designs + 'images/';
 
 /**
  * Helper: changeNotification
@@ -101,11 +101,11 @@ function changeNotification(fType, eType, msg) {
  */
 gulp.task('sass:build', function () {
     return mainCss.forEach(function (maincss, index) {
-        if (Options().debug){
+        if (Options().debug) {
             gutil.log('File ' + gutil.colors.cyan.bold(maincss));
         }
         var compressed = 'compressed';
-        if (Options().debug){
+        if (Options().debug) {
             compressed = 'expanded';
         }
 
@@ -121,7 +121,7 @@ gulp.task('sass:build', function () {
                 addComment: false
             }))
             .pipe(plumber.stop())
-            .pipe(gulpif(Options().debug == 'true',debug()))
+            .pipe(gulpif(Options().debug == 'true', debug()))
             .pipe(gulp.dest(cssPath[index]));
     })
 
@@ -149,7 +149,7 @@ gulp.task('sass', ['sass:build', 'sass:sling']);
  */
 gulp.task('js:lint', function () {
     var jslintPaths = components.concat(jsPath);
-    jslintPaths = jslintPaths.map(function(path, index) {
+    jslintPaths = jslintPaths.map(function (path, index) {
         return path + '**/*.js';
     });
 
@@ -163,7 +163,7 @@ gulp.task('js:lint', function () {
             }
         }))
         .pipe(eslint.format())
-        .pipe(eslint.results(function(results) {
+        .pipe(eslint.results(function (results) {
             // Called once for all ESLint results.
             console.log('Total Results: ' + results.length);
             console.log('Total Warnings: ' + results.warningCount);
@@ -171,17 +171,6 @@ gulp.task('js:lint', function () {
         }))
         .pipe(eslint.failAfterError());
 });
-
-/**
- * Task: `bs4`
- * Copy Boostrap 4 and dependencies into the project
- */
-gulp.task('bs4:sass', function () {
-    return gulp.src(['node_modules/bootstrap/scss/**/*'])
-        .pipe(gulp.dest(sassVendorPath[3] + '/bs4'))
-});
-
-
 
 
 /**
@@ -195,20 +184,20 @@ gulp.task('watch', function () {
 
     // Set up our streams
     var jsWatchPath = components.concat(jsPath);
-    jsWatchPath = jsWatchPath.map(function(path, index){
+    jsWatchPath = jsWatchPath.map(function (path, index) {
         return path + '**/*.js'
     });
 
     var sassWatchPath = components.concat(sassPath);
-    sassWatchPath = sassWatchPath.map(function(path, index){
+    sassWatchPath = sassWatchPath.map(function (path, index) {
         return path + '**/*.scss'
     });
     sassWatchPath.concat(mainCss);
 
-    var markupWatchPath = components.map(function(path, index){
+    var markupWatchPath = components.map(function (path, index) {
         return path + '**/**/*.html'
     });
-    markupWatchPath = markupWatchPath.concat(components.map(function(path, index){
+    markupWatchPath = markupWatchPath.concat(components.map(function (path, index) {
         return path + '**/**/*.jsp'
     }))
 
@@ -262,6 +251,6 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('build', ['bs4:sass' ,'sass:build','js:lint']);
+gulp.task('build', ['sass:build', 'js:lint']);
 
 gulp.task('default', ['build']);

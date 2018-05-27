@@ -5,7 +5,7 @@
         cq:template="/conf/demo-project/settings/wcm/templates/content-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="Français"
-        sling:resourceType="demo-project/commons/components/structure/page"
+        sling:resourceType="demo-project/commons/components/structure/base-page"
         pageTitle="Nouveau Project">
         <root
             jcr:primaryType="nt:unstructured"
