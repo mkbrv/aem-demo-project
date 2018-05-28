@@ -2,6 +2,6 @@
 use(function script() {
     var text = this.text;
     return {
-        hi: 'Hi ' + text
+        hi: 'Server Side Script: Hi ' + text
     };
 });

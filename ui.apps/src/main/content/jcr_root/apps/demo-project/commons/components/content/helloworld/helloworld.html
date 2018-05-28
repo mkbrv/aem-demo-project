@@ -2,5 +2,5 @@
 
 <p data-sly-test="${properties.text}">Text property: ${properties.text}</p>
 
-<div data-sly-use.script="script.js @ text=properties.text">${script.hi}</div>
+<div data-sly-use.script="${'script.js' @ text=properties.text}">${script.hi}</div>
 
