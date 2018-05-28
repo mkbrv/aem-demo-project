@@ -64,7 +64,7 @@
                             <primary
                                 jcr:primaryType="nt:unstructured"
                                 selected="{Boolean}true"
-                                text="Amadeus blue"
+                                text="Blue"
                                 value="primary"/>
                             <info
                                 jcr:primaryType="nt:unstructured"
